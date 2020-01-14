@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script>
+			function scriptheadtag() {
+				document.getElementById('scriptheadtag').innerHTML = "scriptheadtag";			
+			}						
+		</script>
+	</head>
+
+	<body>
+
+		<h2>JavaScript</h2>
+		<!-- ==================== No "" for Date() ==================== -->
+		<button
+		onclick = "document.getElementById('pdemo').innerHTML = Date()">
+			Click me to dispaly Date
+		</button>
+		<p id  = "pdemo"></p>
+		<p id  = "pdemo">Cannot Change</p>
+		
+<!-- ============================ "" ============================ -->		
+		<p id  = "pdemo1">JavaScript Can Change HTML content</p>
+		<!-- ==================== "" for String ==================== -->
+		<button
+		onclick = 'document.getElementById("pdemo1").innerHTML = "Hello JavaScript!"'>
+			Click me to show what JavaScript'' can do?
+		</button>
+<!-- ============================ '' ============================ -->		
+		<button
+		onclick = "document.getElementById('pdemo1').innerHTML = 'Hello JavaScript!'">
+			Click me to show what JavaScript"" can do?
+		</button>
+<!--============================================================================-->
+		<p id = "pdemo2" style="font-size:26px">JavaScript Can Change CSS content</p>
+		<button
+		onclick = "document.getElementById('pdemo2').style.fontStyle='italic'">
+			Click me to show what JavaScript can do with CSS?
+		</button>
+<!--============================================================================-->
+<!--
+https://stackoverflow.com/questions/3968593/how-can-i-set-multiple-css-styles-in-javascript
+-->
+<!--============================================================================-->
+		<p id = "pdemo2ME" style="font-size:5px">JavaScript Can Change CSS content  [Multiple Erase Existing]</p>
+		<button
+		onclick = 'document.getElementById("pdemo2ME").
+					setAttribute("style", "font-style:italic; font-weight:bold;")'>
+			Click me to show what JavaScript can do with CSS [Multiple Erase Existing]?
+		</button>
+<!--============================================================================-->
+<!--============================================================================-->
+		<p id = "pdemo2M" style="font-size:5px;color:blue">JavaScript Can Change CSS content  [Multiple]</p>
+		<button
+		onclick = 'Object.assign(document.getElementById("pdemo2M").style,
+					{ fontStyle:"italic", fontWeight:"bold", color:"red" })'>
+		Click me to show what JavaScript can do with CSS [Multiple]?
+		</button>
+<!--============================================================================-->		
+<!--
+		<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+		<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+-->
+<!--============================================================================-->
+		<p id = "pdemo3">JavaScript Can Hide(CSS) HTML content</p>
+		<button
+		onclick = "document.getElementById('pdemo3').style.display='none'">
+			Click me to show what JavaScript can do with HTML (Hide) display?
+		</button>
+<!--============================================================================-->
+		<p id = "pdemo4" style = "display:none">
+			JavaScript Can Show(CSS) HTML content
+		</p>
+		<button
+			onclick = "document.getElementById('pdemo4').style.display='block'">
+				Click me to show what JavaScript can do with HTML (Show) display?
+		</button>
+<!--============================================================================-->
+<!--============================================================================-->
+		<h1>JavaScript Script Tag</h1>
+		
+		<h4>JavaScript in body tag</h4>
+		<p id = "scriptbodytag"></p>
+		<script>
+			// Old JavaScript : <script type="text/javascript">
+			// The type attribute is not required. JavaScript is the default scripting language in HTML.
+			document.getElementById('scriptbodytag').innerHTML = "scriptbodytag";			
+		</script>
+<!--============================================================================-->
+		<h4>JavaScript in head tag</h4>
+		<p id = "scriptheadtag">Try scriptheadtag</p>
+		<button onclick="scriptheadtag()">Try it</button>
+<!--============================================================================-->
+<!--
+		<script src="https://www.w3schools.com/js/myScript.js"></script>
+-->
+<!--============================================================================-->
+<!--============================================================================-->
+		<p id = "pdemo5">
+			JavaScript Can Erase HTML content
+		</p>
+		<button
+		onclick = "document.write('NEW')">
+			Click me to show what JavaScript can do with HTML (Erase) display?
+		</button>
+<!--============================================================================-->
+		<p id = "pdemo6">
+			JavaScript Can Use Window Functions
+		</p>
+		<button
+		onclick = "window.alert('NEW')">
+			Click me to show what JavaScript can do with HTML Window?
+		</button>
+<!--============================================================================-->
+		<p id = "pdemo7">
+		JavaScript Can Use Console Functions
+		</p>
+		<button
+		onclick = "console.log('NEW')">
+			Click me to show what JavaScript can do with HTML Console?
+		</button>
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+		<h1>JavaScript Programs</h1>
+<!--============================================================================-->
+<!--============================================================================-->
+		<h2>01.Topic : JavaScript Statements [var -- Declares a variable]</h2>
+		<h5>JavaScript uses the var keyword to declare variables.</h5>
+		<h4>In HTML, JavaScript programs are executed by the web browser.</h4>
+		<h5>JavaScript statements are composed of :
+Values, Operators, Expressions, Keywords, and Comments.</h5>
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+		<h2>02.Topic : JavaScript Syntax</h2>
+		<ul>
+			<li>The JavaScript syntax defines two types of values: Fixed values <b>[literals]</b> and variable values [<b>variables</b> : All JavaScript <b>variables</b> must be <b>identified</b> with <b>unique names -> identifiers</b>.]</li>
+			<li><b>JavaScript Identifiers: </b> First character must be a letter, or (_), or ($). Numbers are not allowed as the first character. This way JavaScript can easily distinguish identifiers from numbers.</li>
+			<li>Is <b>Case Sensitive</b></li>
+			<li>JavaScript does not interpret <b>VAR</b> or <b>Var</b> as the keyword <b>var</b>.</li>
+			<li>Single Line Comments - <b>//</b>. Multi-line Comments - <b>/* */</b>.</li>
+		</ul>
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+		<h2>03.Topic : JavaScript  Variables</h2>
+		<ul>
+			<li>Creating a <b>variable</b> in JavaScript is called <b>"declaring"</b> a variable. </li>
+			<ul>
+				<li><b>Declare</b> a JavaScript variable with the var keyword: var carName</li>
+				<li>After the declaration, the variable has no value : (<b>undefined</b>)</li>
+				<li>To assign a value to the variable, use : <b>equal</b> sign</li>
+				<li>If you <b>re-declare</b> a JavaScript variable, it will not lose its value.</li>
+			</ul>
+		</ul>
+		<p id = "numberInQuotes01">
+		</p>
+		<p id = "numberInQuotes02">
+		</p>
+		<script>
+			var x = "5" + 2 + 3;
+			document.getElementById("numberInQuotes01")
+				.innerHTML = `The value of x [var x = "5" + 2 + 3] is ${x}`;
+			var x = 2 + 3 + "5";
+			document.getElementById("numberInQuotes02")
+				.innerHTML = `The value of x [var x = 2 + 3 + "5"] is ${x}`;
+		</script>		
+		
+		
+<!--============================================================================-->
+		<h3>01.Add two numbers(vars)</h3>
+		<p id = "addTwoNumbers">		
+		</p>		
+		<p id = "defaultValue">
+			Default Value
+		</p>		
+		<script>
+			var x, y, z;
+			document.getElementById("defaultValue")
+				.innerHTML = "Default value : " + z;
+			x = 1;
+			y = 7;
+			z = x + y;
+			var z; // ReDeclare
+			// Var z;
+			document.getElementById("addTwoNumbers")
+				.innerHTML = "The value of z is " + z + ".";
+		</script>
+<!--============================================================================-->
+
+
+
+<!--============================================================================-->
+<!--============================================================================-->
+<!--============================================================================-->
+		<h2>JavaScript Operators</h2>
+<!--============================================================================-->		
+<!--============================================================================-->
+<!--============================================================================-->
+		<h3>01.+,-,*,/,%,++,--,** [{operator}= : += : x += y : x = x + y ]</h3>
+		<p id = "plusOperator"/>
+		<p id = "minusOperator"/>
+		<p id = "*Operator"/>
+		<p id = "/Operator"/>
+		<p id = "%Operator"/>
+		<p id = "++PostOperator"/>
+		<p id = "++PreOperator"/>
+		<p id = "--PostOperator"/>
+		<p id = "--PreOperator"/>	
+		<p id = "exponentiationPreOperator"/>	
+		<p id = "mathExponentiationPreOperator"/>
+		<p id = "additionAssignmentOperator"/>
+		<script>
+			var x = 7 , y = 1;
+			var z = x + y;
+			document.getElementById("plusOperator")
+				.innerHTML = x + " + " + y  + " = " + z;
+			var z = x - y;
+			document.getElementById("minusOperator")
+				.innerHTML = x + " - " + y  + " = " + z;
+			var z = x * y;
+			document.getElementById("*Operator")
+				.innerHTML = x + " * " + y  + " = " + z;
+			var z = y / x;
+			document.getElementById("/Operator")
+				.innerHTML = y + " / " + x  + " = " + z;
+			var z = x % y;
+			document.getElementById("%Operator")
+				.innerHTML = x + " % " + y  + " = " + z;
+			var z = x++ + y;
+			document.getElementById("++PostOperator")
+				.innerHTML = "x++(7++) + y(1) = " + z;				
+			var x = 7;
+			var z = ++x + y;
+			document.getElementById("++PreOperator")
+				.innerHTML = "[Reset X]++x(++7) + y(1) = " + z;
+			var x = 7;
+			var z = x-- + y;
+			document.getElementById("--PostOperator")
+				.innerHTML = "[Reset X]x--(7--) + y(1) = " + z;
+			var x = 7;
+			var z = --x + y;
+			document.getElementById("--PreOperator")
+				.innerHTML = "[Reset X]--x(--7) + y(1) = " + z;
+			var x = 7, y = 8;
+			var z = x**y;
+			document.getElementById("exponentiationPreOperator")
+				.innerHTML = x + " ** " + y  + " = " + z;
+			var z = Math.pow(x,y);
+			document.getElementById("mathExponentiationPreOperator")
+				.innerHTML = "Math.pow(" + x + "," + y  + ")  = " + z;
+			var x = 7;
+			x += 1;
+			document.getElementById("additionAssignmentOperator")
+				.innerHTML = `var x = 7; x += 1; => ${x}`;
+		</script>
+<!--============================================================================-->
+<!--============================================================================-->
+		<h2>JavaScript DataTypes</h2>
+<!--============================================================================-->
+<!--============================================================================-->
+		<p id  = "Number"/>
+		<p id  = "lengthEPlus"/>
+		<p id  = "lengthEMinus"/>
+		<p id  = "String"/>
+		<p id  = "Object"/>
+		<p id  = "None"/>
+		<p id  = "Boolean"/>
+		<p id  = "Arrays"/>
+		<p id  = "undefined"/>
+		<p id  = "undefinedVar"/>
+		<p id  = "empty"/>
+		<p id  = "null"/>
+		<p id  = "null?undefined"/>
+		<p id  = "null?undefined01"/>
+		<p id  = "null?undefined02"/>
+		<p id  = "null?undefined03"/>
+		<p id  = "undefinedVariable"/>
+		<p id  = "undefinedVariableHTML"/>
+		<p id  = "function"/>
+		
+		
+		
+		
+		<script>
+			var length       = 16.01;			// Number with Decimal			
+			var lengthEPlus  = 16.01e+5;		// Number with Decimal&Exponential(+)			
+			var lengthEMinus = 16.01e-5;		// Number with Decimal&Exponential(-)
+			var lastName     = "THEJA";			// String
+			var x            = {
+				firstName	:"KSRN",
+				lastName	:"THEJA"
+			};									// Object
+			hi 				= "hello";			// None
+			var boolean = true;					// Boolean
+			var arrays		= ["car00", "car01" ,"car02"];
+			var undefined;
+			var undefinedVar  = undefined;
+			var empty = "";
+			var nullVar = null;
+			function myFunction() {
+			}
+			
+			
+			document.getElementById("Number")
+				.innerHTML = "length = " + length +
+				" & typeof(length) : " + typeof(length);						
+			document.getElementById("lengthEPlus")
+				.innerHTML = "lengthEPlus = " + lengthEPlus +
+				" & typeof(lengthEPlus) : " + typeof(lengthEPlus);						
+			document.getElementById("lengthEMinus")
+				.innerHTML = "lengthEMinus = " + lengthEMinus +
+				" & typeof(lengthEMinus) : " + typeof(lengthEMinus);			
+			document.getElementById("String")
+				.innerHTML = "lastName = " + lastName +
+				" & typeof(lastName) : " + typeof(lastName);			
+			document.getElementById("Object")
+				.innerHTML = "x.firstName = " + x.firstName + " & x.lastName = " + x.lastName +
+				" & typeof(x) : " + typeof(x);			
+			document.getElementById("None")
+				.innerHTML = "hi = " + hi +
+				" & typeof(hi) : " + typeof(hi);
+			document.getElementById("Boolean")
+				.innerHTML = "boolean = " + boolean +
+				" & typeof(boolean) : " + typeof(boolean);
+			document.getElementById("Arrays")
+				.innerHTML = "<h4>Elements of Array:</h4>" + 
+				"arrays[0] : " + arrays[0] + 
+				"<br/>" + 
+				"arrays[1] : " + arrays[1] + 
+				"<br/>" + 
+				"arrays[2] : " + arrays[2]
+				+
+				" & typeof(arrays) : " + typeof(arrays);
+			document.getElementById("undefined")
+				.innerHTML = "undefined = " + undefined +
+				" & typeof(undefined) : " + typeof(undefined);
+			document.getElementById("undefinedVar")
+				.innerHTML = "undefinedVar = " + undefinedVar +
+				" & typeof(undefinedVar) : " + typeof(undefinedVar);
+			document.getElementById("empty")
+				.innerHTML = "empty = " + empty +
+				" & typeof(empty) : " + typeof(empty);
+			document.getElementById("null")
+				.innerHTML = "nullVar = " + nullVar +
+				" & typeof(nullVar) : " + typeof(nullVar);				
+			document.getElementById("null?undefined")
+				.innerHTML = "nullVar == undefinedVar : ";				
+			document.getElementById("null?undefined01")
+				.innerHTML = nullVar == undefinedVar;				
+			document.getElementById("null?undefined02")
+				.innerHTML = "nullVar === undefinedVar : ";				
+			document.getElementById("null?undefined03")
+				.innerHTML = nullVar === undefinedVar;				
+			document.getElementById("undefinedVariable")
+				.innerHTML = "undefinedVariable = " + undefinedVariable +
+				" & typeof(undefinedVariable) : " + typeof(undefinedVariable);			
+			document.getElementById("undefinedVariableHTML")
+				.innerHTML = "undefinedVariableHTML01 = " +
+				" & typeof(undefinedVariableHTML01) : " + typeof(undefinedVariableHTML01);		
+			document.getElementById("function")
+				.innerHTML = "function = " + myFunction +
+				" & typeof(myFunction) : " + typeof(myFunction);			
+				
+		</script>
+		
+		
+	
+		
+		
+		
+		
+	</body>
+
+	</html>
+			
