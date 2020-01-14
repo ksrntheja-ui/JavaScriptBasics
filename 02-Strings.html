@@ -1,0 +1,144 @@
+<html>
+	<body>
+		<h1>
+			JavaScript Strings
+		</h2>
+		
+		<p id = "str01">
+		</p>
+		<p id = "lengthOfString">
+		</p>
+		<p id = "escapeCharacter01">
+		</p>		
+		<p id = "escapeCharacter02">
+		</p>		
+		<p id = "escapeCharacter03">
+		</p>		
+		<p id = "assignString01">
+		</p>		
+		<p id = "assignNewOperatorString01">
+		</p>				
+		<p id = "assignString02">
+		</p>
+		<p id = "assignNewOperatorString02">
+		</p>
+		<p id = "assignString03">
+		</p>
+		<p id = "assignNewOperatorString03">
+		</p>
+		<p id = "assignNewOperatorString04">
+		</p>
+		<p id = "assignNewOperatorString05">
+		</p>
+		<p id = "assignNewOperatorString06">
+		</p>
+		<p id = "assignNewOperatorString07">
+		</p>
+		<p id = "assignNewOperatorString08">
+		</p>
+		
+		
+		
+		<script>
+			var x = "JavaScript Strings Double Quote's";
+			var y = 'JavaScript Strings Single Quote"s';
+			document.getElementById("str01")
+			.innerHTML = '"" -> ' + x + " & '' -> " + y;
+// ============================================================================
+// ============================================================================
+			var lengthOfString  = "ABCDEFGHIJKLMNOPQRSTUVWXZY";
+			document.getElementById("lengthOfString")
+			.innerHTML = 'Length of ' + lengthOfString + " -> " + lengthOfString.length;
+// ============================================================================
+// ============================================================================
+			// var breakString01 = "Hello "world" demo";
+			// Uncaught SyntaxError: Unexpected identifier
+			var escapeCharacter01 = "Hello \"world\" demo";
+			document.getElementById("escapeCharacter01")
+			.innerHTML = "Hello \"world\" demo" + " -> " + escapeCharacter01;
+			var escapeCharacter02 = 'Hello \'world\' demo';
+			document.getElementById("escapeCharacter02")
+			.innerHTML = 'Hello \'world\' demo' + " -> " + escapeCharacter02;
+			var escapeCharacter03 = 'Hello \world\\ demo';
+			document.getElementById("escapeCharacter03")
+			.innerHTML = 'Hello \\world\\\\ demo' + " -> " + escapeCharacter03;
+			// \b	
+			// \f	
+			// \n	
+			// \r	
+			// \t	
+			// \v
+			var assignString = "Hello"
+			var assignNewOperatorString =  new String("Hello");
+			document.getElementById("assignString01")
+			.innerHTML = "typeof " + assignString + " -> " + typeof assignString;			
+			document.getElementById("assignNewOperatorString01")
+			.innerHTML = "typeof [new]" + assignNewOperatorString + " -> " + typeof assignNewOperatorString;			
+			document.getElementById("assignString02")
+			.innerHTML = assignString + " == " + assignNewOperatorString;
+			document.getElementById("assignNewOperatorString02")
+			.innerHTML = assignString == assignNewOperatorString;
+			document.getElementById("assignString03")
+			.innerHTML = assignString + " === " + assignNewOperatorString;
+			document.getElementById("assignNewOperatorString03")
+			.innerHTML = assignString === assignNewOperatorString;
+			var assignNewOperatorString01 =  new String("Hello");			
+			document.getElementById("assignNewOperatorString04")
+			.innerHTML = "typeof [new]" + assignNewOperatorString01 + " -> " + typeof assignNewOperatorString01;			
+			document.getElementById("assignNewOperatorString05")
+			.innerHTML = assignNewOperatorString + " == " + assignNewOperatorString01;
+			document.getElementById("assignNewOperatorString06")
+			.innerHTML = assignNewOperatorString == assignNewOperatorString01;
+			document.getElementById("assignNewOperatorString07")
+			.innerHTML = assignNewOperatorString + " === " + assignNewOperatorString01;
+			document.getElementById("assignNewOperatorString08")
+			.innerHTML = assignNewOperatorString === assignNewOperatorString01;
+		
+
+		</script>
+		
+		<h1>
+			JavaScript String Methods
+		</h2>
+		
+		
+		<p id = "m01">
+		</p>
+		<p id = "m02">
+		</p>
+		<p id = "m0201">
+		</p>
+		<p id = "m0202">
+		</p>
+		<p id = "m0203">
+		</p>
+		<p id = "m03">
+		</p>
+		
+		
+		<script>
+			var str01 = "Please locate where 'locate' occurs!";
+			var pos = str01.indexOf("locate");
+			document.getElementById("m01")
+			.innerHTML = "Position[indexOf] of 'locate' in \"" + str01 + "\" is " + pos;
+			var pos = str01.lastIndexOf("locate");
+			document.getElementById("m02")
+			.innerHTML = "Position[lastIndexOf] of 'locate' in \"" + str01 + "\" is " + pos;
+			var pos = str01.lastIndexOf("not found");
+			document.getElementById("m0201")
+			.innerHTML = "Position[lastIndexOf] of 'not found' in \"" + str01 + "\" is " + pos;
+			var pos = str01.indexOf("locate",8);
+			document.getElementById("m0202")
+			.innerHTML = "Position[indexOf(,)] of 'locate' in \"" + str01 + "\" is " + pos;
+			var pos = str01.lastIndexOf("locate",20);
+			document.getElementById("m0202")
+			.innerHTML = "Position[lastIndexOf(,)] of 'locate' in \"" + str01 + "\" is " + pos;
+			var pos = str01.search("locate");
+			document.getElementById("m03")
+			.innerHTML = "Position[search] of 'locate' in \"" + str01 + "\" is " + pos;
+					
+		
+		</script>
+		
+	</body>
+<html>
