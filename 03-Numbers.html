@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+	<h1>JAVASCRIPT NUMBERS</h1>
+	
+	<p id = "num1"></p>
+	<p id = "num2"></p>
+	<p id = "num3"></p>
+	<p id = "num4"></p>
+	<p id = "num5"></p>
+	<p id = "num6"></p>
+	
+	<p id = "valueOf1"></p>
+	<p id = "valueOf2"></p>
+	<p id = "valueOf3"></p>
+	<p id = "valueOf4"></p>
+	<p id = "valueOf5"></p>
+	<p id = "valueOf6"></p>
+
+	<p id = "convertNumber01"></p>
+	<p id = "convertNumber02"></p>
+	<p id = "convertNumber03"></p>
+
+	<p id = "numberProperties01"></p>
+	<p id = "numberProperties02"></p>
+	<p id = "numberProperties03"></p>	
+	<p id = "numberProperties04"></p>	
+	<p id = "numberProperties05"></p>	
+	<p id = "numberProperties06"></p>	
+	<p id = "numberProperties07"></p>	
+	<p id = "numberProperties08"></p>	
+	<p id = "numberProperties09"></p>	
+	<p id = "numberProperties10"></p>	
+	<p id = "numberProperties11"></p>	
+	
+	<script>
+		var n1 = 3.14;
+		var n2 = 3;
+		var n3 = 123e5;
+		var n4 = 123e-5;
+		var n5 = 123456789123456;
+		var n6 = 12345678912345691;
+		
+		var n7 = 123;
+		var n8 = 45;
+		         
+		
+		document.getElementById('num1').
+		innerHTML = `Number with decimal ${n1}`;		
+		document.getElementById('num2').
+		innerHTML = `Number without decimal ${n2}`;		
+		document.getElementById('num3').
+		innerHTML = `Extra Large Number ${n3}`;		
+		document.getElementById('num4').
+		innerHTML = `Extra Small Number ${n4}`;	
+		document.getElementById('num5').
+		innerHTML = `Accurate Number (Upto 15) ${n5}`;	
+		document.getElementById('num6').
+		innerHTML = `Accurate Number (Upto 16) ${n6}`;
+		
+			
+		document.getElementById('valueOf1').
+		innerHTML = `Addition of ${n7}.valueOf and ${n8}.valueOf => `;	
+		document.getElementById('valueOf2').
+		innerHTML = n7.valueOf() + n8.valueOf();	
+		
+		document.getElementById('valueOf3').
+		innerHTML = `Addition of (123).valueOf and (45).valueOf => `;	
+		document.getElementById('valueOf4').
+		innerHTML = (123).valueOf() + (45).valueOf();
+		
+		document.getElementById('valueOf5').
+		innerHTML = `Addition of (123+45).valueOf => `;	
+		document.getElementById('valueOf6').
+		innerHTML = (123+45).valueOf();
+		
+		
+		document.getElementById('valueOf6').
+		innerHTML = (123+45).valueOf();	
+		
+		document.getElementById('convertNumber01').
+		innerHTML = "Number(true) ->" + Number(true) + "<br>" +
+					"Number(false) -> " + Number(false) + "<br>" +
+					'Number("10") -> ' + Number("10") + "<br>" + 
+					'Number("  10") -> ' + Number("  10") + "<br>" +
+					'Number("10  ") -> ' + Number("10  ") + "<br>" +
+					'Number(" 10  ") -> ' + Number(" 10  ") + "<br>" +
+					'Number("10.33") -> ' + Number("10.33") + "<br>" + 
+					'Number("10,33") -> ' + Number("10,33") + "<br>" +
+					'Number("10 33") -> ' + Number("10 33") + "<br>" +
+					'Number("10 years") -> ' + Number("10 years") + "<br>" +
+					'Number("years 10") -> ' + Number("years 10") + "<br>" +
+					'Number("John")  -> ' + Number("John") + "<br>" +
+					'Number(new Date()) -> ' + Number(new Date());
+		
+		document.getElementById('convertNumber02').
+		innerHTML = "parseInt(true) ->" + parseInt(true) + "<br>" +
+					"parseInt(false) -> " + parseInt(false) + "<br>" +
+					'parseInt("10") -> ' + parseInt("10") + "<br>" + 
+					'parseInt("  10") -> ' + parseInt("  10") + "<br>" +
+					'parseInt("10  ") -> ' + parseInt("10  ") + "<br>" +
+					'parseInt(" 10  ") -> ' + parseInt(" 10  ") + "<br>" +
+					'parseInt("10.33") -> ' + parseInt("10.33") + "<br>" + 
+					'parseInt("10,33") -> ' + parseInt("10,33") + "<br>" +
+					'parseInt("10 33") -> ' + parseInt("10 33") + "<br>" +
+					'parseInt("10 years") -> ' + parseInt("10 years") + "<br>" +
+					'parseInt("years 10") -> ' + parseInt("years 10") + "<br>" +
+					'parseInt("John")  -> ' + parseInt("John") + "<br>" +
+					'parseInt(new Date()) -> ' + parseInt(new Date());
+
+					
+		
+		document.getElementById('convertNumber03').
+		innerHTML = "parseFloat(true) ->" + parseFloat(true) + "<br>" +
+					"parseFloat(false) -> " + parseFloat(false) + "<br>" +
+					'parseFloat("10") -> ' + parseFloat("10") + "<br>" + 
+					'parseFloat("  10") -> ' + parseFloat("  10") + "<br>" +
+					'parseFloat("10  ") -> ' + parseFloat("10  ") + "<br>" +
+					'parseFloat(" 10  ") -> ' + parseFloat(" 10  ") + "<br>" +
+					'parseFloat("10.33") -> ' + parseFloat("10.33") + "<br>" + 
+					'parseFloat("10,33") -> ' + parseFloat("10,33") + "<br>" +
+					'parseFloat("10 33") -> ' + parseFloat("10 33") + "<br>" +
+					'parseFloat("10 years") -> ' + parseFloat("10 years") + "<br>" +
+					'parseFloat("years 10") -> ' + parseFloat("years 10") + "<br>" +
+					'parseFloat("John")  -> ' + parseFloat("John") + "<br>" +
+					'parseFloat(new Date()) -> ' + parseFloat(new Date());
+
+		document.getElementById('numberProperties01').
+		innerHTML = "Number.MAX_VALUE -> " + Number.MAX_VALUE;
+	
+		document.getElementById('numberProperties02').
+		innerHTML = "Number.MIN_VALUE -> " + Number.MIN_VALUE;
+	
+		document.getElementById('numberProperties03').
+		innerHTML = "Number.POSITIVE_INFINITY -> " + Number.POSITIVE_INFINITY;
+		
+		var x = 1/0;
+		
+		document.getElementById('numberProperties04').
+		innerHTML = "var x = 1/0 -> " + x;
+				
+		document.getElementById('numberProperties05').
+		innerHTML = "Number.NEGATIVE_INFINITY -> " + Number.NEGATIVE_INFINITY;
+
+		var y = -1/0;		
+		
+		document.getElementById('numberProperties06').
+		innerHTML = "var y = -1/0 -> " + y;
+						
+		document.getElementById('numberProperties07').
+		innerHTML = "Number.NaN -> " + Number.NaN;
+		
+		var z = Number.NaN;		
+				
+		document.getElementById('numberProperties08').
+		innerHTML = "var z = Number.NaN -> " + z;
+			
+		var a = 100 / "Apple";		
+				
+		document.getElementById('numberProperties10').
+		innerHTML = 'var a = 100 / "Apple" -> ' + a;
+		
+		var b = 8;
+		var c = b.MAX_VALUE;
+		
+		document.getElementById('numberProperties11').
+		innerHTML = "var b = 8; var c = b.MAX_VALUE; -> " + c;
+		
+		// Number d = 8;
+		// Number d = new Number(10);
+		// d = 10;
+		
+		// document.getElementById('numberProperties12').
+		// innerHTML = "Number d = 8; -> " + d;
+		
+		
+		
+
+	
+	
+	
+	</script>
+
+
+</html>
