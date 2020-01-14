@@ -1,0 +1,125 @@
+<html>
+	<body>
+		<p id = "FUNCTIONS"/>
+		<p id = "demo01"/>
+		<p id = "demo02"/>
+		<p id = "functionScope01"/>
+		<p id = "functionScope02"/>
+		<p id = "functionScope03"/>
+		<p id = "globalScope01"/>
+		<p id = "globalScope02"/>
+		<p id = "globalScope03"/>
+		
+		<p id = "OBJECTS"/>
+		<p id = "accessObjectByDot"/>
+		<p id = "accessObjectBySquareBracket"/>
+		<p id = "printObjectMethod"/>
+		<p id = "accessObjectMethod"/>		
+		<p id = "StringObject"/>
+		<p id = "NumberObject"/>
+		<p id = "BooleanObject"/>
+		
+		<p id = "EVENTS"/>
+		<p id  = "ButtonOnclick"/>
+		<button onclick = "document.getElementById('ButtonOnclick')
+		.innerHTML = Date()"> The time is?</button>
+
+
+
+
+		
+		<script>
+// ============================================================================
+// ============================================================================
+			document.getElementById("FUNCTIONS")
+			.innerHTML = "<h2>JavaScript Functions</h2>";
+// ============================================================================
+// ============================================================================
+			var pi = 3.14;
+			document.getElementById("globalScope01")
+				.innerHTML = "<b>pi above function declaration: </b>" + pi;
+			document.getElementById("functionScope01")
+			.innerHTML = "<b><i>typeof </i>result above function declaration: </b>"
+			+ typeof result;			
+			// + result;			
+			// Uncaught ReferenceError: result is not defined
+			
+			function myFunction(p1, p2) {
+				var result  = p1*p2;
+				var pi = 3.14159;
+				document.getElementById("globalScope02")
+				.innerHTML = "<b>pi in function: </b>" + pi;					
+				document.getElementById("functionScope02")
+				.innerHTML = "<b>result in function: </b>" + result;					
+				return result;		
+			}
+			
+			document.getElementById("demo01")
+			.innerHTML = "Invoke Function : myFunction(7,1) : " + myFunction(7,1);
+			document.getElementById("demo02")
+			.innerHTML = "<b>Printing the function: </b>" + myFunction;			
+			document.getElementById("globalScope03")
+				.innerHTML = "<b>pi below function declaration: </b>" + pi;
+			document.getElementById("functionScope03")
+			.innerHTML = "<b><i>typeof </i> result below function declaration: </b>"
+			+ typeof result;			
+			// + result;			
+			// Uncaught ReferenceError: result is not defined			
+			
+			
+// ============================================================================
+// ============================================================================
+			document.getElementById("OBJECTS")
+			.innerHTML = "<br><br><br><h2>JavaScript OBJECTS</h2>";
+// ============================================================================
+// ============================================================================
+			var person = {
+				firstName	: "KSRN",
+				lastName	: "THEJA",
+				fullName	: function() {
+								return this.firstName + " " + this.lastName;
+							}
+			};
+			document.getElementById("accessObjectByDot")
+			.innerHTML = "<b>Printing Object by DOT[.] : </b>" +
+			"person.firstName: " + person.firstName +
+			", person.lastName: " + person.lastName;
+			document.getElementById("accessObjectBySquareBracket")
+			.innerHTML = "<b>Printing Object by SQUAREBRACKET[[]] : </b>" +
+			'person["firstName"]: ' + person["firstName"] +
+			", person['lastName']: " + person['lastName'];
+			document.getElementById("printObjectMethod")
+			.innerHTML = "<b>Print Object method : </b>" + person.fullName;			
+			document.getElementById("accessObjectMethod")
+			.innerHTML = "<b>Invoke Object method : </b>" + person.fullName();			
+			
+			var String = new String();		// var string = new String(); 
+			var Number = new Number();		// var Number = new Number();
+			var boolean = new Boolean();	// var boolean = new Boolean();
+			
+			document.getElementById("StringObject")
+			.innerHTML = "<b>typeof String : </b>" + typeof String;			
+			
+			document.getElementById("NumberObject")
+			.innerHTML = "<b>typeof Number : </b>" + typeof Number;			
+			
+			document.getElementById("BooleanObject")
+			.innerHTML = "<b>typeof boolean: </b>" + typeof boolean;			
+
+// ============================================================================
+// ============================================================================
+			document.getElementById("EVENTS")
+			.innerHTML = "<br><br><br><h2>JavaScript EVENTS</h2>";
+// ============================================================================
+// ============================================================================
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+	</body>
+</html>
