@@ -1,0 +1,97 @@
+<html>
+
+	<body>
+	
+		<h1>JavaScript Sorting Arrays</h1>
+		
+		<p id = "arraySort01">			
+		</p>
+		<p id = "arraySort02">			
+		</p>
+		<p id = "arraySort03">			
+		</p>
+		<p id = "arraySort04">			
+		</p>
+		<p id = "arraySort05">			
+		</p>
+		<p id = "arraySort06">			
+		</p>
+		<p id = "arraySort07">			
+		</p>
+		<p id = "arraySort08">			
+		</p>
+		<p id = "arraySort09">			
+		</p>
+		<p id = "arraySort10">			
+		</p>
+		<p id = "arraySort11">			
+		</p>
+		<p id = "arraySort12">			
+		</p>
+		<p id = "arraySort13">			
+		</p>
+		
+		
+		<script>
+		
+			function myFunction01(array) {
+				text = "Looping : <ul>";
+				for(var i = 0 ; i < array.length ; i++) {
+					text = text + "<li>" + "(" + array[i] + ")" + "</li>";
+				}
+				text = text + "</ul>";
+				return text;	
+			}
+		
+			var a = [1, "two", "Three", 4, "Five"];
+			var b = [11, "twotwo", "three", 44, "FiveFive"];
+			function add(x, y) {
+				return x + y;
+			}
+			a[3] = b;
+			a[5] = Date.now;
+			a[6] = Date();
+			a[20] = "uello";
+			a[7] = "uello";
+			a[8] = "1t";
+			a[9] = "$";
+			a[10] = "8 #";
+			a[11] = "#";
+			a[12] = " #";			
+			a[13] = "8#";			
+			a[14] = " ";			
+			a[15] = "Six";			
+			a[16] = "six";
+			document.getElementById("arraySort01").
+			innerHTML = `Array => ${myFunction01(a)}`;
+			a.sort();			
+			document.getElementById("arraySort02").
+			innerHTML = `Array after a.sort() => ${myFunction01(a)}`;
+			
+			var c = [9, 8, 7, 6, 5, 4, 3, 2, 1];		
+			document.getElementById("arraySort03").
+			innerHTML = `Array => ${myFunction01(c)}`;			
+			c.sort();			
+			document.getElementById("arraySort04").
+			innerHTML = `Array after c.sort() => ${myFunction01(c)}`;
+			
+			var d = [1, 2 , 3 , 4, 5, 6, 7, 8, 9, 10, 11, 12, 20, 21, 22, 23];			
+			document.getElementById("arraySort05").
+			innerHTML = `Array => ${myFunction01(d)}`;			
+			d.sort();			
+			document.getElementById("arraySort06").
+			innerHTML = `Array after d.sort() => ${myFunction01(d)}`;
+			
+			
+			
+
+			
+
+			
+	
+		
+		</script>
+	
+	</body>
+
+</html>
