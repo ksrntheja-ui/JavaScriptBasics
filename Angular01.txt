@@ -1,0 +1,242 @@
+structural directive	-> Structural directives shape or reshape the DOM's structure, typically by adding, removing, and manipulating the elements to which they are attached. 
+							-> Any directive with an * is a structural directive.
+*ngFor???
+*ngIf???
+
+{{ }}					-> interpolation		syntax	->	Interpolation {{ }} lets you render the property value as text. 
+
+[ ]						-> Property binding		syntax	->	Property binding [ ] lets you use the property value in a template expression.  
+
+( )						-> Event binding		syntax	->
+
+
+
+
+
+
+
+
+
+Components				-> define areas of responsibility in your UI that let you reuse these sets of UI functionality.
+							-> A component class			: which handles data and functionality.
+							-> An HTML template				: which determines what is presented to the user.
+							-> Component-specific styles	: that define the look and feel.	
+						
+						-> An Angular application is composed of a tree of components, in which each Angular component has a specific purpose and responsibility.
+						
+						-> @Component decorator			->  indicates that the following class is a component.
+							-> It provides metadata about the component :
+								-> The selector [prefix app-, followed by the component name] is used to identify the component. The selector is the name you give the Angular component when it is rendered as an HTML element on the page. 
+								-> The template and
+								-> style filenames.
+							-> The component definition also includes an exported class (ProductAlertsComponent), which handles functionality for the component.
+								
+@Input					-> decorator					-> 	The @Input decorator indicates that the property value will be passed in from the component's parent
+
+
+@Output	& EventEmitter	-> decorator					
+														-> define a property named <?> with an @Output decorator and an instance of event emitter.
+														-> This makes it possible for the product alert component to emit an event when the value of the <?> property changes.							
+								
+								
+								
+								
+								
+								
+								
+								
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                Routing
+
+		-> The Angular router enables you to show different components and data to the 
+			user
+			based on where the user is
+			in the application.
+		
+		-> The router enables navigation from one view to the next as users perform application tasks:
+			-> Enter a URL in the address bar, and the browser navigates to a corresponding page.
+			-> Click links on the page, and the browser navigates to a new page.
+			-> Click the browser's back and forward buttons, and the browser navigates backward and forward through the history of pages you've seen.
+			
+
+Registering a route
+
+		-> 
+		
+		
+		
+
+		
+		
+		
+1.	<base href>			:
+							->	Most routing applications should add a <base> element to the $index.html$ as the $first child$ in the $<head>$ tag to tell the router how to compose navigation URLs.
+							
+							->	If the app folder is the application root, as it is for the sample application, set the href value exactly as shown here : 
+									<base href="/">
+									
+2.	Router imports		:
+							->	The Angular Router is an optional service that presents a particular component view for a given URL. It is not part of the Angular core. It is in its own library package, @angular/router.
+								import { RouterModule, Routes } from '@angular/router';
+
+3.	Router service		:	
+							->	A routed Angular application has one singleton instance of the Router service
+							->	When the browser's URL changes, that router looks for a corresponding Route from which it can determine the component to display.
+							->	A router has no routes until you configure it. The following example creates five route definitions, configures the router via the RouterModule.forRoot() method, and adds the result to the AppModule's imports array :
+							
+							const appRoutes: Routes = [
+								{
+									path: 'crisis-center',
+									component: CrisisListComponent
+								},
+								{
+									path: 'hero/:id',
+									component: HeroDetailComponent
+								},
+								{
+									path: 'heroes',
+									component: HeroListComponent,
+									data: {
+											title: 'Heroes List'
+									}
+								},
+								{
+									path: '',
+									redirectTo: '/heroes',
+									pathMatch: 'full'
+								},
+								{
+									path: '**',
+									component: PageNotFoundComponent
+								}
+							];
+
+							@NgModule({
+								imports: [
+									RouterModule.forRoot(
+										appRoutes,
+										{
+											enableTracing: true
+										} // <-- debugging purposes only
+									)
+									// other imports here
+								],
+								...
+							})
+							export class AppModule { }
+
+
+
+
+4.	Router outlet		:
+							->	The RouterOutlet is a directive from the router library that is used like a component.
+							->	It acts as a placeholder that marks the spot in the template where the router should display the components for that outlet.
+							
+							<router-outlet></router-outlet>
+							<!-- Routed components go here -->
+	
+5.	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To Test :
+			-> ng test
+			
+	describe() // Suite : Group of related tests
+	it() // spec [a test]
+	
+			
+			
+			
+			
+describe('AppComponent', () => {
+
+  it('true should be true', () => {
+    expect(true).toBe(true);
+  })
+  
+})
+
+
+describe('<>Component', () => {
+
+  it('', () => {
+    
+  });
+  
+  it('', () => {
+    
+  });
+  
+});
+
+
+beforeEach(() => {
+	// set up
+});
+
+afterEach(() => {
+	// tear down
+});
+
+beforeAll(() => {
+});
+
+afterAll(() => {
+});
